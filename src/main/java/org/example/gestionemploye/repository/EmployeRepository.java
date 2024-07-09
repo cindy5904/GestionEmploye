@@ -1,13 +1,14 @@
 package org.example.gestionemploye.repository;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.NotFoundException;
 import org.example.gestionemploye.entity.Employe;
 import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class EmployeRepository extends BaseRepository<Employe>{
-
+@ApplicationScoped
+public class EmployeRepository extends BaseRepository<Employe> {
     public EmployeRepository() {
         super();
     }
@@ -154,4 +155,5 @@ public class EmployeRepository extends BaseRepository<Employe>{
         return employes;
 
     }
+
 }
